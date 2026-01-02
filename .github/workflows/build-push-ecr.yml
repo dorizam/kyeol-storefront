@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION: ap-southeast-2
+  AWS_REGION: ap-northeast-3
 
 permissions:
   id-token: write
@@ -40,7 +40,7 @@ jobs:
           push: true
           build-args: |
             NEXT_PUBLIC_SALEOR_API_URL=https://storefront1.saleor.cloud/graphql/
-            NEXT_PUBLIC_STOREFRONT_URL=https://origin-dev-kyeol.msp-g1.click
+            NEXT_PUBLIC_STOREFRONT_URL=https://dev.yesol.shop
             NEXT_PUBLIC_DEFAULT_CHANNEL=default-channel
           tags: |
             ${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPOSITORY }}:dev-latest
